@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Scroll from './Scroll';
 import spotify from '../assets/images/spotify.png';
 import itunes from '../assets/images/itunes.png';
@@ -49,24 +48,35 @@ export default function Nav({ onMenuToggle = () => {} }) {
                   <a
                     href="https://open.spotify.com/artist/2vg5kBllbmKWB9v52ZHhPL"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img src={spotify} alt="" />
                   </a>
-                  <a href="https://www.apple.com/apple-music/" target="_blank">
+                  <a
+                    href="https://www.apple.com/apple-music/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={itunes} alt="" />
                   </a>
-                  <a href="https://soundcloud.com/enderwright" target="_blank">
+                  <a
+                    href="https://soundcloud.com/enderwright"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={soundcloud} alt="" />
                   </a>
                   <a
                     href="https://www.instagram.com/ender.wright/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img src={instagram} alt="" />
                   </a>
                   <a
                     href="https://www.twitter.com/ender_wright"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img src={twitter} alt="" />
                   </a>
