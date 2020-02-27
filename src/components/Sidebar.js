@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
-import LinkNav from './LinkNav';
 import Scroll from '../components/Scroll';
 import '../assets/sass/sidebar.scss';
 
