@@ -1951,6 +1951,11 @@ body.is-preload,
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     h2 {
       font-size: 1.75em;
