@@ -5,6 +5,7 @@ import instagram from '../assets/images/instagram.png';
 import twitter from '../assets/images/twitter.png';
 import soundcloud from '../assets/images/soundcloud.png';
 import linkedin from '../assets/images/linkedin.png';
+import facebook from '../assets/images/facebook.png';
 import '../assets/sass/footer.scss';
 
 export default function Footer() {
@@ -47,15 +48,22 @@ export default function Footer() {
         >
           <img src={twitter} alt="" />
         </a>
+        <a
+          href="https://www.twitter.com/ender_wright"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={facebook} alt="" />
+        </a>
       </div>
       <div className="author">
-        <h4>Web Experience Created By James Sheehan -- Jmsdevx@gmail.com</h4>
         <a
           href="https://www.linkedin.com/in/jmsdevx/"
           className="author__links"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <h4>Web Experience Created By James Sheehan</h4>
           <img src={linkedin} alt="" />
         </a>
       </div>

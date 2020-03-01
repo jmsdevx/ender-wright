@@ -1,0 +1,13 @@
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 6vh;
+  max-width: 60%;
+  background: #873146;
+  padding: 0.5rem;
+  border-radius: 10px;
+  @media screen {
+    max-width: 100%;
+  }
+}

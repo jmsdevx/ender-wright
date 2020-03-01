@@ -5,6 +5,7 @@ import itunes from '../assets/images/itunes.png';
 import instagram from '../assets/images/instagram.png';
 import twitter from '../assets/images/twitter.png';
 import soundcloud from '../assets/images/soundcloud.png';
+import facebook from '../assets/images/facebook.png';
 
 export default function Nav({ onMenuToggle = () => {} }) {
   return (
@@ -35,7 +36,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
               </li>
               <li onClick={onMenuToggle}>
                 <Scroll type="id" element="three">
-                  Mission
+                  Videos
                 </Scroll>
               </li>
               <li onClick={onMenuToggle}>
@@ -79,6 +80,13 @@ export default function Nav({ onMenuToggle = () => {} }) {
                     rel="noopener noreferrer"
                   >
                     <img src={twitter} alt="" />
+                  </a>
+                  <a
+                    href="https://www.twitter.com/ender_wright"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={facebook} alt="" />
                   </a>
                 </div>
               </li>
