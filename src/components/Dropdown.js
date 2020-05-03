@@ -9,7 +9,7 @@ import '../assets/sass/dropdown.scss';
 export default function Dropdown(
 props
 ) {
-  const { toggleMenu, menuKey, isMenuOpen, dropDownState, listenOrBuy } = props;
+  const { toggleMenu, menuKey, dropDownState, listenOrBuy } = props;
   const subKey = listenOrBuy.substr(0, listenOrBuy.indexOf(' ')).toLowerCase();
 
   return (

@@ -7,7 +7,7 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/images/ender.JPG',
-  pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: `/ender-wright`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'Ender Wright',
   subHeading: '',
   // social

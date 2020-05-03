@@ -8,6 +8,7 @@ import Westside from '../assets/images/Westside.jpg';
 import Anywhere from '../assets/images/Anywhere.jpg';
 import config from '../../config';
 import DropDown from '../components/Dropdown';
+import Videos from '../components/Videos';
 
 const IndexPage = () => {
 
@@ -166,9 +167,9 @@ const IndexPage = () => {
         <div className="inner">
           <header className="major">
             <h2>Videos</h2>
-            <p>Coming Soon!</p>
           </header>
         </div>
+        <Videos />
       </section>
 
       <section id="cta" className="wrapper style4">

@@ -20,7 +20,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-iframe": "^1.8.0",
     "react-images": "^0.5.19",
+    "react-responsive-carousel": "^3.2.5",
     "react-scrollspy": "^3.4.0",
     "smoothscroll-polyfill": "^0.4.4"
   },

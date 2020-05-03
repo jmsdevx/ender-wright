@@ -445,9 +445,6 @@ header {
     top: -0.25em;
   }
 
-  h2 + p {
-  }
-
   h3 + p {
     font-size: 1.1em;
   }
@@ -1246,8 +1243,6 @@ button,
   }
 
   @include breakpoint('<=small') {
-    .content {
-    }
   }
 }
 
