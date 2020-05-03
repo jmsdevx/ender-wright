@@ -4,10 +4,33 @@
   justify-content: space-between;
   height: 6vh;
   max-width: 60%;
-  background: #873146;
   padding: 0.5rem;
   border-radius: 10px;
   @media screen {
     max-width: 100%;
+  }
+  &.listen{
+    background-color: #873146;
+  }
+  &.buy {
+    background-color: #edb73b;
+  }
+}
+
+
+
+.listen-now {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .link-icon {
+    height: 5rem;
+  }
+
+  a {
+    border: none;
   }
 }

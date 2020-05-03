@@ -9,7 +9,7 @@ module.exports = {
   manifestIcon: 'src/assets/images/ender.JPG',
   pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'Ender Wright',
-  subHeading: 'Payday Vibes: on the 1st & 15th of every month.',
+  subHeading: '',
   // social
   socialLinks: [
     {

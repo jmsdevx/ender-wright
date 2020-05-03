@@ -1198,6 +1198,8 @@ button,
 .spotlight {
   @include vendor('align-items', 'center');
   @include vendor('display', 'flex');
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   .image {
     @include vendor('order', '1');
@@ -1206,27 +1208,14 @@ button,
 
     img {
       border-radius: 0;
-      width: 100%;
+      max-width: 100%;
     }
   }
 
   .content {
-    @include padding(2em, 4em);
     @include vendor('order', '2');
     max-width: 48em;
     width: 60%;
-  }
-
-  &:nth-child(2n) {
-    @include vendor('flex-direction', 'row-reverse');
-  }
-
-  @for $i from 1 through _misc(max-spotlights) {
-    $j: 0.075 * $i;
-
-    &:nth-child(#{$i}) {
-      background-color: rgba(0, 0, 0, $j);
-    }
   }
 
   @include breakpoint('<=large') {
@@ -1240,7 +1229,6 @@ button,
   }
 
   @include breakpoint('<=medium') {
-    display: block;
 
     br {
       display: none;
@@ -1251,7 +1239,6 @@ button,
     }
 
     .content {
-      @include padding(4em, 3em);
       max-width: none;
       text-align: center;
       width: 100%;
@@ -1260,7 +1247,6 @@ button,
 
   @include breakpoint('<=small') {
     .content {
-      @include padding(3em, 2em);
     }
   }
 }
@@ -1511,6 +1497,10 @@ button,
 
   &.style5 {
     @include wrapper(accent7);
+  }
+
+  &.style6 {
+    background-color: gold;
   }
 
   @include breakpoint('<=medium') {
@@ -2132,4 +2122,8 @@ body.is-mobile {
       background-color: darken(_palette(bg), 8);
     }
   }
+}
+
+.m-btm {
+  margin-bottom: 2rem;
 }

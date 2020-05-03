@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Scroll from '../components/Scroll';
 import PriceIsPride from '../assets/images/PriceIsPride.jpg';
@@ -6,11 +6,30 @@ import Liar from '../assets/images/Liar.jpg';
 import Pesos from '../assets/images/Pesos.jpg';
 import Westside from '../assets/images/Westside.jpg';
 import Anywhere from '../assets/images/Anywhere.jpg';
-import Candlelight from '../assets/images/Candlelight.jpg';
-import Sometimes from '../assets/images/Sometimes.jpg';
 import config from '../../config';
+import DropDown from '../components/Dropdown';
 
 const IndexPage = () => {
+
+  const [dropDownState, toggleDropDownState] = useState([]);
+
+  const isMenuOpen = menuKey => {
+    return dropDownState.includes(menuKey);
+  }
+
+  const updateOpenMenuState = (menuKey) => {
+    if (isMenuOpen(menuKey)) {
+      const lastState = [...dropDownState]
+     const nextState = lastState.filter(item => item !== menuKey)
+     toggleDropDownState(nextState);
+    } else {
+      const nextState = [...dropDownState];
+      nextState.push(menuKey);
+      toggleDropDownState(nextState);
+    }
+  }
+
+
   return (
     <Layout>
       <section id="banner">
@@ -63,7 +82,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section id="two" className="wrapper alt style2">
+      <section id="two" className="wrapper alt style2 m-btm">
         <header className="major center-align">
           <h1>Songs</h1>
         </header>
@@ -73,9 +92,7 @@ const IndexPage = () => {
           </div>
           <div className="content">
             <h2>
-              Price Is Pride{' -- '}
-              <br />
-              March 1st
+              Price Is Pride
             </h2>
             <p>
               A contemplative song about overcoming ego
@@ -83,15 +100,15 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
+          <DropDown toggleMenu={updateOpenMenuState} menuKey={'price'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Listen Now"}/>
+          <DropDown toggleMenu={updateOpenMenuState} menuKey={'price'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Buy Now"}/>
         <section className="spotlight">
           <div className="image">
             <img src={Liar} alt="" />
           </div>
           <div className="content">
             <h2>
-              Liar{' -- '}
-              <br />
-              March 15th
+              Liar
             </h2>
             <p>
               A song that tells the story of two people <br />
@@ -99,15 +116,15 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'liar'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Listen Now"}/>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'liar'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Buy Now"}/>
         <section className="spotlight">
           <div className="image">
             <img src={Pesos} alt="" />
           </div>
           <div className="content">
             <h2>
-              Pesos{' -- '}
-              <br />
-              April 1st
+              Pesos
             </h2>
             <p>
               A braggadocious song that provides <br />a heavy dose of autotune
@@ -115,61 +132,34 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'pesos'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Listen Now"}/>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'pesos'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Buy Now"}/>
         <section className="spotlight">
           <div className="image">
             <img src={Westside} alt="" />
           </div>
           <div className="content">
             <h2>
-              Westside{' -- '}
-              <br />
-              April 15th
+              Westside
             </h2>
             <p>An upbeat summertime vibe.</p>
           </div>
         </section>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'westside'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Listen Now"}/>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'westside'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Buy Now"}/>
         <section className="spotlight">
           <div className="image">
             <img src={Anywhere} alt="" />
           </div>
           <div className="content">
             <h2>
-              Anywhere{' -- '}
-              <br />
-              May 1st
+              Anywhere
             </h2>
             <p>An autotune-heavy drugged-out love song.</p>
           </div>
         </section>
-        <section className="spotlight">
-          <div className="image">
-            <img src={Candlelight} alt="" />
-          </div>
-          <div className="content">
-            <h2>
-              Candlelight{' -- '}
-              <br />
-              May 15th
-            </h2>
-            <p>A song for and about people who love having sex.</p>
-          </div>
-        </section>
-        <section className="spotlight">
-          <div className="image">
-            <img src={Sometimes} alt="" />
-          </div>
-          <div className="content">
-            <h2>
-              Sometimes{' -- '}
-              <br />
-              June 1st
-            </h2>
-            <p>
-              A stoney vibe about the ups and downs
-              <br /> of making music for a living.
-            </p>
-          </div>
-        </section>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'anywhere'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Listen Now"}/>
+        <DropDown toggleMenu={updateOpenMenuState} menuKey={'anywhere'} isMenuOpen={isMenuOpen} dropDownState={dropDownState} listenOrBuy={"Buy Now"}/>
       </section>
 
       <section id="three" className="wrapper style3 special">

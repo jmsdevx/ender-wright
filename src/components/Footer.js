@@ -21,7 +21,7 @@ export default function Footer() {
           <img src={spotify} alt="" />
         </a>
         <a
-          href="https://www.apple.com/apple-music/"
+          href="https://music.apple.com/us/artist/ender-wright/1486654270"
           target="_blank"
           rel="noopener noreferrer"
         >
