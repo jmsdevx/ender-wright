@@ -34,7 +34,6 @@ props
             </a>
             <a
               href={links[menuKey][subKey].apple}
-              target="_blank"
               rel="noopener noreferrer"
             >
               <img src={itunes} alt="" className="link-icon" />
@@ -53,7 +52,6 @@ props
           <div className="listen-now">
             <a
               href={links[menuKey][subKey].itunes}
-              target="_blank"
               rel="noopener noreferrer"
             >
               <img src={itunes} alt="" className="link-icon" />
